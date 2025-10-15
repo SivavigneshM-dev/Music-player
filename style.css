@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1f0033, #4b0058);
+  color: white;
+  overflow-x: hidden;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.nav-icons a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 40px;
+}
+
+
+.left {
+  flex: 1 1 35%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.song-cover {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.song-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.song-info p {
+  font-size: 16px;
+  color: #c9c9c9;
+  margin-bottom: 10px;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.right {
+  flex: 1 1 55%;
+}
+
+.right h1 {
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.right h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.playlist-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  flex: 1 1 30%;
+
+}
+
+.playlist-item:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.playlist-item p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right h1 {
+    text-align: center;
+    font-size: 42px;
+  }
+
+  .subtitle, .right h2 {
+    text-align: center;
+  }
+
+  .playlist {
+    justify-content: center;
+  }
+
+  .playlist-item {
+    flex: 1 1 45%;
+  }
+
+  .left {
+    width: 90%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .right h1 {
+    font-size: 36px;
+  }
+
+  .playlist-item {
+    flex: 1 1 100%;
+  }
+}
